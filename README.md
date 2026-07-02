@@ -8,14 +8,16 @@ srimpro is a python library that contains many tools for the automated extractin
 # Features
 srimpro is designed to have a high ease of use. Most functions only require the `path` input (filepath to the folder containing the appropriate SRIM output files) to generate an output.
 ## Integration Functions
-These functions can be used to integrate under the profiles from SRIM to get total values. For example, the following code will set *vactot* and *novactot* to the total number of vacancies and replacements between depth x1 and x2 respectively.
+These functions are used to integrate under the profiles from SRIM to get total values. For example, the following code will set *vactot* and *novactot* to the total number of vacancies and replacements between depth x1 and x2 respectively:
 ```
-vactot, novactot = pro.totDisplacements(path, x1, x2)
+vactot, novactot = totDisplacements(path, x1, x2)
 ```
-
 
 ## Basic SRIM Plots
-
+These functions are used to generate publication-quality plots or export data to excel, specfically for the data commonly used from SRIM. These include plotting ion distribution and damage dose, energy deposition, and stopping power. For example, the following code will generate the plot shown below:
+```
+rangeAndDpa(path)
+```
 
 # Installation
 srimpro can easily be installed using the following command in Anaconda Prompt or similar application:
