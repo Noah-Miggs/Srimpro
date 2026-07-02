@@ -18,7 +18,7 @@ These functions are used to generate publication-quality plots or export data to
 ```
 rangeAndDpa(path)
 ```
-![1.5 MeV Si in ZrN (1000 nm) Si (500 nm), 16,000 ions calculated](https://github.com/Noah-Miggs/srimpro/tree/main/example_plots/1.5 MeV Si in ZrN and Si ion distribution and damage dose)
+![1.5 MeV Si in ZrN (1000 nm) Si (500 nm), 16,000 ions calculated](https://github.com/Noah-Miggs/srimpro/tree/main/example_plots/1.5_MeV_Si_in_ZrN_and_Si_ion_distribution_and_damage_dose)
 
 # Installation
 srimpro can easily be installed using the following command in Anaconda Prompt or similar application:
