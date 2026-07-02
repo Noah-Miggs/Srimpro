@@ -4,9 +4,10 @@ srimpro is a python library that contains many tools for the automated extractin
 * all functions of srimpro are fully documented, and all code is fully commented
 
 # Installation
-srimpro can easily be installed using the following command in Anaconda Prompt or similar application
+srimpro can easily be installed using the following command in Anaconda Prompt or similar application:
 ```
 pip install git+https://github.com/Noah-Miggs/srimpro.git
 ```
 
 # Setup
+After installing srimpro, all dependencies including pysrim should be automatically installed as well. srimpro requires updated versions of the **output.py**, **srim.py**, and **elementdb.py** files within pysrim to make it compatible with python 3.14, so the original files from pysrim must be manually replaced. See ***srimpro Setup*** in documentation for more details.
