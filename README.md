@@ -6,6 +6,7 @@ srimpro is a python library that contains many tools for the automated extractin
 * all functions are fully documented, and all code is fully commented
 
 # Features
+srimpro is designed to have a high ease of use. Most functions only require the `path` input (filepath to the folder containing the appropriate SRIM output files) to generate an output.
 ## Integration Functions
 These functions can be used to integrate under the profiles from SRIM to get total values. For example, the following code will set *vactot* and *novactot* to the total number of vacancies and replacements between depth x1 and x2 respectively.
 ```
