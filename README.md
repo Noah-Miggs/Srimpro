@@ -21,7 +21,15 @@ rangeAndDpa(path, fluence)
 ![1.5 MeV Si in ZrN (1000 nm) Si (500 nm), 16,000 ions calculated, fluence=1e14](/example_plots/1.5-MeV-Si-in-ZrN-and-Si-ion-distribution-and-damage-dose.png)
 
 ## Advanced SRIM Plots
-These functions provide advanced utilities, making use of SRIM data that is typically highly difficult to obtain and perform calculations with, preventing it from being used in the field despite its importance. These functions automatically extract this data, perform the necessary calculations, and generate publication-quality plots. For example, the following code will generate the combined damage dose and ion distribution plots shown below (damage dose from irradiation by multiple ion energies) which is very useful for uniform irradiation studies:
+These functions provide advanced utilities, making use of SRIM data that is typically highly difficult to obtain and perform calculations with, preventing it from being used in the field despite its importance. These functions automatically extract this data, perform the necessary calculations, and generate publication-quality plots. For example, the following code will generate the side and front views of the collision distribution shown below (either all recoils, are only the primary knock-ons such as in the example plots), which is useful for analyzing the spatial coupling of the inelastic thermal spike and collision processes:
+```
+collisionPlotDepth(path, x1, x2, scale='log')
+collisionPlotXsection(path, x1, x2, scale='log')
+```
+![1.5 MeV Si in ZrN collision distribution side view, only ion-target collisions, 2000 ions used](/example_plots)
+![1.5 MeV Si in ZrN collision distribution front view, only ion-target collisions, 2000 ions used](/example_plots)
+
+Another important function will generate the combined damage dose and ion distribution plots shown below (damage dose from irradiation by multiple ion energies) which is useful for uniform irradiation studies, using the following code:
 ```
 multiRangeAndDpa(paths, labels, fluence, plot_style='combined', ref_layer=2)
 ```
