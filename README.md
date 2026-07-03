@@ -50,3 +50,9 @@ pip install git+https://github.com/Noah-Miggs/srimpro.git
 
 # Setup
 After installing srimpro, all dependencies including pysrim should be automatically installed as well. srimpro requires updated versions of the *output.py*, *srim.py*, and *elementdb.py* files within pysrim to make it compatible with python 3.14, so the original files from pysrim must be manually replaced. See *srimpro Setup* in documentation for more details.
+
+# Using srimpro in a python IDE
+Once srimpro has been installed and setup, the library can be easily imported into a .py file to be used. For example, including the following code at the top of the .py file will allow all srimpro functions to be accessed:
+```
+import srimpro.functions as pro
+```
