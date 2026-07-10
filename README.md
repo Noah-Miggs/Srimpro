@@ -10,7 +10,7 @@ srimpro is designed to have a high ease of use. Most functions only require the 
 ## Integration Functions
 These functions are used to integrate under the profiles from SRIM to get total values. For example, the following code will set *vactot* and *novactot* to the total number of vacancies and replacements between depth x1 and x2 respectively:
 ```
-vactot, novactot = totDisplacements(path, x1, x2)
+vactot, novactot = totDisplacements(path, x1=x1, x2=x2)
 ```
 
 ## Basic SRIM Plots
