@@ -48,7 +48,7 @@ To install srimpro, Git must be installed first. To install git, follow the offi
 ```
 pip install git+https://github.com/Noah-Miggs/srimpro.git
 ```
-## Updating Installation
+## Updating the Installation
 If an older version of srimpro was installed (i.e. a new release of srimpro was published after the initial install), the package will need to be manually updated. This can be done using the following command in Anaconda Prompt or similar application:
 ```
 pip install --upgrade git+https://github.com/Noah-Miggs/srimpro.git
