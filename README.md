@@ -3,7 +3,7 @@ Srimpro is a python library that contains many tools for the automated extractin
 * Srimpro reads data from SRIM output files using an updated and modified version of [pysrim](https://github.com/costrouc/pysrim)
 * most functions have several optional inputs to provide a wide range of utilities
 * plot settings can be easily modified within each function to allow for full plot customization
-* all functions are fully documented, and all code is fully commented
+* all functions are fully documented, and all code is fully commented. It is strongly recommended to read the documentation for each function used
 
 # Features
 Srimpro is designed to have a high ease of use. Most functions only require the `path` input (filepath to the folder containing the appropriate SRIM output files) to generate an output.
