@@ -44,7 +44,7 @@ weightedRecoilSpectra(paths, labels, excelpath=excelpath)
 
 # Installation
 ## Initial Installation
-To install Srimpro, Git must be installed first. To install git, follow the official [GitHub instructions](https://github.com/git-guides/install-git). After installing git, Srimpro can be easily be installed using the following command in Anaconda Prompt:
+To install Srimpro, Git must be installed first. To install git, follow the official [GitHub instructions](https://github.com/git-guides/install-git). After installing Git, Srimpro can be easily be installed using the following command in Anaconda Prompt:
 ```
 pip install git+https://github.com/Noah-Miggs/srimpro.git
 ```
