@@ -6,39 +6,39 @@ Srimpro is a python library that contains many tools for the automated extractin
 * all functions are fully documented, and all code is fully commented. It is strongly recommended to read the documentation for each function used
 
 # Features
-Srimpro is designed to have a high ease of use. Most functions only require the `path` input (filepath to the folder containing the appropriate SRIM output files) to generate an output.
+Srimpro is designed to have a high ease of use, so it can be used without a knowledge of python by simply following the user manual. Most functions only require the `path` input (filepath to the folder containing the appropriate SRIM output files) to generate an output.
 ## Integration Functions
 These functions are used to integrate under the profiles from SRIM to get total values. For example, the following code will set *vactot* and *novactot* to the total number of vacancies and replacements between depth x1 and x2 respectively:
 ```
-vactot, novactot = totDisplacements(path, x1=x1, x2=x2)
+vactot, novactot = pro.totDisplacements(path, x1=x1, x2=x2)
 ```
 
 ## Basic SRIM Plots
 These functions are used to generate publication-quality plots or export data to excel, specfically for the data commonly used from SRIM. These include plotting ion distribution and damage dose, energy deposition, and stopping power. For example, the following code will generate the plot shown below:
 ```
-rangeAndDpa(path, fluence)
+pro.rangeAndDpa(path, fluence)
 ```
 ![1.5 MeV Si in ZrN (1000 nm) Si (500 nm), 16,000 ions calculated, fluence=1e14](/example_plots/1.5-MeV-Si-in-ZrN-and-Si-ion-distribution-and-damage-dose.png)
 
 ## Advanced SRIM Plots
 These functions provide advanced utilities, making use of SRIM data that is typically highly difficult to obtain and perform calculations with, preventing it from being used in the field despite its importance. These functions automatically extract this data, perform the necessary calculations, and generate publication-quality plots. For example, the following code will generate the side and front views of the collision distribution shown below (either all recoils, are only the primary knock-ons such as in the example plots), which is useful for analyzing the spatial coupling of the inelastic thermal spike and collision processes:
 ```
-collisionPlotDepth(path, x1, x2, scale='log')
-collisionPlotXsection(path, x1, x2, scale='log')
+pro.collisionPlotDepth(path, x1, x2, scale='log')
+pro.collisionPlotXsection(path, x1, x2, scale='log')
 ```
 ![1.5 MeV Si in ZrN collision distribution side view, only ion-target collisions, 2000 ions used](example_plots/1.5-MeV-Si-in-ZrN-and-Si-collision-depth-distribution-(only-ZrN-layer)-2000-ions-only-PKA-collisions.png)
 ![1.5 MeV Si in ZrN collision distribution front view, only ion-target collisions, 2000 ions used](example_plots/1.5-MeV-Si-in-ZrN-and-Si-collision-distribution-xsection-(only-ZrN-layer)-2000-ions-only-PKA-collisions.png)
 
 Another important function can generate the combined damage dose and ion distribution plots shown below (damage dose from irradiation by multiple ion energies) which is useful for uniform irradiation studies, using the following code:
 ```
-multiRangeAndDpa(paths, labels, fluence, plot_style='combined', ref_layer=2)
+pro.multiRangeAndDpa(paths, labels, fluence, plot_style='combined', ref_layer=2)
 ```
 ![3.25 MeV He in varying Al layer depths and Cu (combined damage dose profiles), fluence=6.7e15](example_plots/3.25-MeV-He-in-Al-and-Cu-high-fluence-dpa-(combined).png)
 ![3.25 MeV He in varying Al layer depths and Cu (combined ion distribution profiles), fluence=6.7e15](example_plots/3.25-MeV-He-in-Al-and-Cu-high-fluence-ion-range-(combined).png)
 
 Another set of important functions can generate the normal or weighted primary recoil spectra plots shown below, which is useful for comparing irradiations by different particles (such as comparing ion and neutron irradiations), using the following code (for weighted spectra):
 ```
-weightedRecoilSpectra(paths, labels, excelpath=excelpath)
+pro.weightedRecoilSpectra(paths, labels, excelpath=excelpath)
 ```
 ![Cumulative weighted primary recoil spectra for 1 MeV H, 1 MeV He, and CANDU neutron flux spectrum in Zr-2.5%Nb](example_plots/Weighted-cumulative-PKA-spectrum-for-1-MeV-H-and-He-and-CANDU-neutron-spectrum-in-Zr-2,5%Nb.png)
 
